@@ -7,27 +7,25 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
 </head>
 <body>
-	<h1>[Project Name] Project Timeline</h1>
-	<ol class="timeline">
-		<li class="tl-node">
-			<div class="tl-stamp">August 14th, 2013</div>
-			<div class="tl-content">Kickoff Meeting</div>
-			<a href="#">View notes</a>
-		</li>
-		<li class="tl-node">
-			<div class="tl-stamp">August 9th, 2013</div>
-			<div class="tl-content">Sign contract</div>
-			<a href="#">View contract</a>
-		</li>
-		<li class="tl-node">
-			<div class="tl-stamp">August 7th, 2013</div>
-			<div class="tl-content">Initial meeting</div>
-			<a href="#">Meeting Notes</a>
-		</li>
-		<li class="tl-node">
-			<div class="tl-stamp">July 13th, 2013</div>
-			<div class="tl-content">Initial contact</div>
-		</li>
-	</ol>
+	
+	<div id="container"></div>
+
+	<script id="timeline-template" type="text/x-handlebars-template">
+		<h1>{{title}} Project Timeline</h1>
+		<ol class="timeline">
+			{{#each nodes}}
+			<li class="tl-node">
+				<div class="tl-stamp">{{timestamp}}</div>
+				<div class="tl-content">{{content}}</div>
+				{{#each links}}
+				<a href="{{url}}">{{title}}</a>
+				{{/each}}
+			</li>
+			{{/each}}
+		</ol>
+	</script>
+	<script src="js/vendor/handlebars.min.js"></script>
+	<script src="js/main.js"></script>
+
 </body>
 </html>

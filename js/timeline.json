@@ -1,0 +1,11 @@
+{
+  "title": "[Project Name]",
+  "nodes": [{
+    "timestamp": "January 7, 2014",
+    "content": "Some text here",
+    "links": [{
+      "url": "http://google.com",
+      "title": "Google.com"
+      }]
+  }]
+}
